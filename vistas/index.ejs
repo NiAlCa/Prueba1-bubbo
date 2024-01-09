@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Libros</h2>
+    <form action=" agregar" method="post" >
+        <input type="text" name="Name" placeholder="Book Name">
+        <input type="text" name="Author" placeholder="Book Author">
+        <button>Agregar libro</button>
+        <br>
+        <% libros.map(item => { %>
+            <a href="libro/<%= item.id%>"> <%= item.data.bookName %></a>
+            <a href="borrar/<%= item.id%>">borrar</a>
+            <a href="editar/<%= item.id%>">editar</a> 
+            <br>
+        <% }) %>
+    </form>
+</body>
+</html>

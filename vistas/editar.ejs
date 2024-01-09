@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book - <%= book.bookName || 'Unknown' %></title>
+</head>
+<body>
+    <h2>Actualizar libro</h2>
+    <form action="/actualizar/<%= book.id %>" method="post" >
+        <input type="text" name="Name" placeholder="Book Name" value="<%= book.bookName || '' %>">
+        <input type="text" name="Author" placeholder="Book Author" value="<%= book.bookAuthor || '' %>">
+        <button type="submit">Actualizar</button>
+    </form>
+</body>
+</html>

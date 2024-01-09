@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= book.bookName || 'Unknown' %></title>
+</head>
+<body>
+    <h3>Titulo del libro:</h3>
+    <p><%= book.bookName || 'El titulo no existe' %></p>
+
+    <h3>Autor del libro</h3>
+    <p><%= book.bookAuthor || 'El autor no existe' %></p>
+</body>
+</html>
